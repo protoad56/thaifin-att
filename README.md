@@ -10,6 +10,10 @@
 
 ---
 
+![ThaiFin Quant Dashboard](images/quant_dashboard.png)
+
+---
+
 ## ✨ ฟีเจอร์หลัก (Features)
 
 | โมดูล | รายละเอียด |
@@ -22,6 +26,16 @@
 | 🏭 **Sector Dynamics** | เปรียบเทียบรายได้และกำไรระหว่างอุตสาหกรรม |
 | 📚 **Analysis Hub** | Financial Health, Dividend Hunters, Growth Screen, Sector Rankings |
 | 📖 **User Guide** | คู่มือการใช้งานภาษาไทยสำหรับผู้เริ่มต้น |
+
+---
+
+### UI Gallery
+
+| Systematic Quant Map | Stock Onboarding |
+|:---:|:---:|
+| ![Quant Map](images/quant_dashboard.png) | ![Onboarding](images/onboarding.png) |
+| **DCF Valuation Engine** | **Portfolio Optimizer** |
+| ![DCF](images/dcf_valuation.png) | ![Optimizer](images/portfolio_optimizer.png) |
 
 ---
 
@@ -173,15 +187,6 @@ pytest tests/ -v
 ---
 
 ## 👨‍💻 เครดิตและผู้สร้าง (Credits)
-
-### ผู้พัฒนาและผู้ออกแบบระบบ
-
-**ThaiFin Web Application** สร้างและพัฒนาโดย:
-
-| บทบาท | รายละเอียด |
-|---|---|
-| **ผู้ออกแบบสถาปัตยกรรมระบบ** | Predaboon ([@predaboon](https://github.com/predaboon)) |
-| **เครื่องมือ AI ผู้ช่วยพัฒนา** | Antigravity (Google DeepMind) |
 
 ### ข้อมูลพื้นฐานหุ้น
 
