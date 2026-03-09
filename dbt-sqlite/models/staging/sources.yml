@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: thaifin_sqlite
+    schema: main
+    tables:
+      - name: raw_companies
+      - name: raw_financials

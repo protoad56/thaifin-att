@@ -8,37 +8,16 @@ import sys
 from .database import engine, get_db, Base
 from . import models
 
-# Import ingest_data to run as background task, but since ingest_data uses synchronous DB calls,
-# we need to be careful. APScheduler runs in a separate thread which is fine.
-from apscheduler.schedulers.background import BackgroundScheduler
-from .ingest import ingest_data
-
 app = FastAPI(title="ThaiFin Web App API")
-
-# Setup Scheduler for auto-refresh
-scheduler = BackgroundScheduler()
-
-def scheduled_ingest():
-    print("Running scheduled data ingestion...")
-    # Run full ingestion
-    try:
-        ingest_data(test_mode=False)
-        print("Scheduled ingestion completed successfully.")
-    except Exception as e:
-        print(f"Scheduled ingestion failed: {e}")
 
 @app.on_event("startup")
 def startup_event():
     # Create tables if not exists
     Base.metadata.create_all(bind=engine)
-    
-    # Schedule the ingest job to run every day at 1:00 AM
-    scheduler.add_job(scheduled_ingest, 'cron', hour=1, minute=0)
-    scheduler.start()
 
 @app.on_event("shutdown")
 def shutdown_event():
-    scheduler.shutdown()
+    pass
 
 @app.get("/api/system/status")
 def get_system_status(db: Session = Depends(get_db)):

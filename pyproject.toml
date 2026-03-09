@@ -33,6 +33,8 @@ dependencies = [
     "scipy>=1.17.1",
     "pyportfolioopt>=1.6.0",
     "packaging>=25.0",
+    "dbt-core>=1.11.7",
+    "dbt-sqlite>=1.10.0",
 ]
 
 [project.optional-dependencies]
